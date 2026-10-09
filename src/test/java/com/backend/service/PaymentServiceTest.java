@@ -111,7 +111,7 @@ class PaymentServiceTest {
                         () -> paymentService.makeUpiPayment(payment));
 
         assertEquals(
-                "Invalid UPI ID",
+                "Invalid UPI ID.Please enter a valid upi ID",
                 exception.getMessage());
     }
 
@@ -130,7 +130,7 @@ class PaymentServiceTest {
                         () -> paymentService.makeUpiPayment(payment));
 
         assertEquals(
-                "Insufficient funds",
+                "Insufficient funds.Please enter a lower amount",
                 exception.getMessage());
     }
 
